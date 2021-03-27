@@ -22,8 +22,8 @@ public class ProveedoresFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         proveedoresViewModel =
                 new ViewModelProvider(this).get(ProveedoresViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_clientes, container, false);
-        final TextView textView = root.findViewById(R.id.text_proveedores);
+        View root = inflater.inflate(R.layout.fragment_proveedores, container, false);
+        final TextView textView = root.findViewById(R.id.text_sld);
         proveedoresViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

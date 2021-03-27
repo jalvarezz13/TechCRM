@@ -10,7 +10,7 @@ public class TareasViewModel extends ViewModel {
 
     public TareasViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("Ventana tareas");
     }
 
     public LiveData<String> getText() {

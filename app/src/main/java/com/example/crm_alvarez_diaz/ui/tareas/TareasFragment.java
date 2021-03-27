@@ -23,7 +23,7 @@ public class TareasFragment extends Fragment {
         tareasViewModel =
                 new ViewModelProvider(this).get(TareasViewModel.class);
         View root = inflater.inflate(R.layout.fragment_tareas, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
+        final TextView textView = root.findViewById(R.id.text_sld);
         tareasViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

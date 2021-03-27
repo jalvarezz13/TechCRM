@@ -20,10 +20,9 @@ public class EstadisticasFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        estadisticasViewModel =
-                new ViewModelProvider(this).get(EstadisticasViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_tareas, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
+        estadisticasViewModel = new ViewModelProvider(this).get(EstadisticasViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_estadisticas, container, false);
+        final TextView textView = root.findViewById(R.id.text_sld);
         estadisticasViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

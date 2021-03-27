@@ -20,10 +20,9 @@ public class ClientesFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        clientesViewModel =
-                new ViewModelProvider(this).get(ClientesViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_proveedores, container, false);
-        final TextView textView = root.findViewById(R.id.text_clientes);
+        clientesViewModel = new ViewModelProvider(this).get(ClientesViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_clientes, container, false);
+        final TextView textView = root.findViewById(R.id.text_sld);
         clientesViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
