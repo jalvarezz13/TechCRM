@@ -1,4 +1,4 @@
-package com.example.crm_alvarez_diaz.ui.gallery;
+package com.example.crm_alvarez_diaz.ui.estadisticas;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.crm_alvarez_diaz.R;
 
-public class GalleryFragment extends Fragment {
+public class EstadisticasFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
+    private EstadisticasViewModel estadisticasViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        estadisticasViewModel =
+                new ViewModelProvider(this).get(EstadisticasViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_tareas, container, false);
+        final TextView textView = root.findViewById(R.id.text_slideshow);
+        estadisticasViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
