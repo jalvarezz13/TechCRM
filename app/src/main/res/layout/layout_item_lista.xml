@@ -2,15 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:id="@+id/imContacto"
+        android:layout_width="59dp"
+        android:layout_height="66dp"
         android:layout_weight="1"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@drawable/avatar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="5sp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
 
     <LinearLayout
         android:layout_width="300sp"
@@ -27,7 +33,7 @@
         <TextView
             android:id="@+id/lblTelefono"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:text="TextView"
             android:textSize="18sp" />
     </LinearLayout>
