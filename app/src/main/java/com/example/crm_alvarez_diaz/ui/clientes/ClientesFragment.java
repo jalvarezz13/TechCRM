@@ -40,7 +40,6 @@ public class ClientesFragment extends Fragment {
                 textView.setText(s);
             }
         });
-
         //Obtener una referencia a la lista gráfica
         lstContactos = lstContactos.findViewById(R.id.lstContactos);
         //Crear la lista de contactos y añadir algunos datos de prueba
