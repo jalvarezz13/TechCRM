@@ -11,12 +11,23 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.crm_alvarez_diaz.AdaptadorListaContactos;
+import com.example.crm_alvarez_diaz.Contacto;
 import com.example.crm_alvarez_diaz.R;
+
+import java.util.ArrayList;
 
 public class ClientesFragment extends Fragment {
 
     private ClientesViewModel clientesViewModel;
+    private ArrayList<Contacto> contactos;
+    public static RecyclerView lstContactos;
+
+    private AdaptadorListaContactos adaptador;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -29,6 +40,31 @@ public class ClientesFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        //Obtener una referencia a la lista gráfica
+        lstContactos = lstContactos.findViewById(R.id.lstContactos);
+        //Crear la lista de contactos y añadir algunos datos de prueba
+        contactos = new ArrayList<Contacto>();
+        //Método que rellena el array con datos de prueba
+        rellenarDatosPrueba();
+
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
+        lstContactos.setLayoutManager(mLayoutManager);
+        adaptador = new AdaptadorListaContactos(contactos);
+        lstContactos.setAdapter(adaptador);
         return root;
+    }
+    public void rellenarDatosPrueba()
+    {
+        contactos.add(new Contacto("María Rodríguez", "234 123 411",1, "mariarodriguez@correo.com", "C/Ronda, 10"));
+        contactos.add(new Contacto("José Pérez", "234 234 234",1, "joseperez@correo.com", "C/Huertas, 1"));
+        contactos.add(new Contacto("José Ruíz", "545 342 455",2, "joseruiz@correo.com", "C/Ancha, 7"));
+        contactos.add(new Contacto("Carmen López", "666 433 566",0, "carmenlopez@correo.com", "C/Luz, 12"));
+        contactos.add(new Contacto("María Pérez", "444 564 331",1, "mariapezar@correo.com", "C/Ciudad, 11"));
+        contactos.add(new Contacto("José García", "233 223 411",1, "josegarcia@correo.com", "C/Darro, 4"));
+        contactos.add(new Contacto("José Ruíz", "211 234 234",2, "joseruiz@correo.com", "C/Ronda, 6"));
+        contactos.add(new Contacto("Carmen Ruíz", "544 442 425",2, "carmenrodriguez@correo.com", "C/Principal, 13"));
+        contactos.add(new Contacto("Carmen Rodríguez", "623 453 335",0, "carmenrodriguez@correo.com", "C/Rodero, 5"));
+        contactos.add(new Contacto("María García", "432 456 331",1, "mariagarcia@correo.com", "C/Paseo, 8"));
     }
 }
