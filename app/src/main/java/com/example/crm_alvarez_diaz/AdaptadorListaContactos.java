@@ -3,6 +3,7 @@ package com.example.crm_alvarez_diaz;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,11 +17,13 @@ public class AdaptadorListaContactos extends
     public class ContactoViewHolder extends RecyclerView.ViewHolder {
         private TextView lblNombre;
         private TextView lblTelefono;
+        private ImageView imContacto;
 
         public ContactoViewHolder(View view) {
             super(view);
             lblNombre = view.findViewById(R.id.lblNombre);
             lblTelefono = view.findViewById(R.id.lblTelefono);
+            imContacto = view.findViewById(R.id.imContacto);
         }
     }
 
@@ -39,6 +42,14 @@ public class AdaptadorListaContactos extends
         Contacto contacto = contactos.get(position);
         holder.lblNombre.setText(contactos.get(position).getNombre());
         holder.lblTelefono.setText(contactos.get(position).getTelefono());
+        switch (contactos.get(position).getTipo()) {
+            case 1: //Cargar imagen de contactos tipo "familia"
+                holder.imContacto.setImageResource(R.drawable.avatar);
+                break;
+            case 2: //Cargar imagen de los contactos tipo "amigos"
+                holder.imContacto.setImageResource(R.drawable.building);
+                break;
+        }
     }
 
     @Override
