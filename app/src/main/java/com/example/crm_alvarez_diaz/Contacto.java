@@ -3,20 +3,35 @@ package com.example.crm_alvarez_diaz;
 public class Contacto {
     private String nombre;
     private String telefono;
-    public Contacto(String maría_rodríguez, String s, int i, String nombre, String telefono) {
-        this.nombre = nombre;
-        this.telefono = telefono;
+    private int tipo; //0:familia; 1:amigo;2:trabajo
+    private String email;
+    private String direccion;
+
+    public Contacto(String nom, String tel, int tip, String em, String dir) {
+        nombre = nom;
+        telefono = tel;
+        tipo = tip;
+        email = em;
+        direccion = dir;
     }
+
     public String getNombre() {
         return nombre;
     }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+
     public String getTelefono() {
         return telefono;
     }
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+
+    public int getTipo() {
+        return tipo;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getDireccion() {
+        return direccion;
     }
 }

@@ -16,19 +16,21 @@ public class AdaptadorListaContactos extends
     public class ContactoViewHolder extends RecyclerView.ViewHolder {
         private TextView lblNombre;
         private TextView lblTelefono;
+
         public ContactoViewHolder(View view) {
             super(view);
             lblNombre = view.findViewById(R.id.lblNombre);
             lblTelefono = view.findViewById(R.id.lblTelefono);
         }
     }
+
     public AdaptadorListaContactos(ArrayList<Contacto> contactos) {
         this.contactos = contactos;
     }
+
     @Override
     public ContactoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView =
-                LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_item_lista, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_item_lista, parent, false);
         return new ContactoViewHolder(itemView);
     }
 
@@ -38,6 +40,7 @@ public class AdaptadorListaContactos extends
         holder.lblNombre.setText(contactos.get(position).getNombre());
         holder.lblTelefono.setText(contactos.get(position).getTelefono());
     }
+
     @Override
     public int getItemCount() {
         return contactos.size();
