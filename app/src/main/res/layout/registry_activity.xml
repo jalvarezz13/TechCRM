@@ -43,7 +43,7 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="10dp"
+            android:layout_width="13dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="sans-serif"
@@ -53,14 +53,17 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/nameInputRegistry"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_weight="1"
+            android:background="#1A000000"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
-            android:textColor="#3E3E3E"
+            android:textColor="#000000"
             android:textStyle="italic" />
     </LinearLayout>
 
@@ -73,7 +76,7 @@
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="10dp"
+            android:layout_width="13dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="sans-serif"
@@ -83,14 +86,17 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName5"
+            android:id="@+id/usernameInputRegistry"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_weight="1"
+            android:background="#1A000000"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@example"
-            android:textColor="#3E3E3E"
+            android:textColor="#000000"
             android:textStyle="italic" />
     </LinearLayout>
 
@@ -103,7 +109,7 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="10dp"
+            android:layout_width="13dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="sans-serif"
@@ -113,13 +119,17 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editTextPhone"
+            android:id="@+id/phoneInputRegistry"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_weight="1"
+            android:background="#1A000000"
             android:ems="10"
             android:inputType="phone"
-            android:textColor="#3E3E3E"
+            android:textColor="#000000"
             android:textStyle="italic" />
     </LinearLayout>
 
@@ -132,7 +142,7 @@
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="10dp"
+            android:layout_width="13dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="sans-serif"
@@ -142,13 +152,17 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/emailInputRegistry"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_weight="1"
+            android:background="#1A000000"
             android:ems="10"
             android:inputType="textEmailAddress"
-            android:textColor="#3E3E3E"
+            android:textColor="#000000"
             android:textStyle="italic" />
 
     </LinearLayout>
@@ -162,7 +176,7 @@
 
         <TextView
             android:id="@+id/textView7"
-            android:layout_width="10dp"
+            android:layout_width="13dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="sans-serif"
@@ -174,11 +188,15 @@
         <EditText
             android:id="@+id/editTextTextPassword2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_weight="1"
+            android:background="#1A000000"
             android:ems="10"
             android:inputType="textPassword"
-            android:textColor="#3E3E3E"
+            android:textColor="#000000"
             android:textStyle="italic" />
 
     </LinearLayout>
@@ -192,7 +210,7 @@
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="10dp"
+            android:layout_width="13dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="sans-serif"
@@ -205,12 +223,16 @@
         <EditText
             android:id="@+id/editTextTextPassword"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_weight="1"
+            android:background="#1A000000"
             android:ems="10"
             android:gravity="center|start"
             android:inputType="textPassword"
-            android:textColor="#3E3E3E"
+            android:textColor="#000000"
             android:textStyle="italic" />
     </LinearLayout>
 

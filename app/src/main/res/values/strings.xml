@@ -28,4 +28,6 @@
     <string name="termsAndConditions">Acepto los términos y condiciones de CRM Álvarez Díaz</string>
     <string name="registry">REGISTRAR</string>
     <string name="introduceYourData">Introduce tus datos:</string>
+    <string name="registryQuery">¿No tienes una cuenta de usuario?</string>
+    <string name="registryHereButtom">Regístrate aquí</string>
 </resources>

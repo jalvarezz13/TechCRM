@@ -26,14 +26,10 @@ public class ConectorBD {
         if (db != null) db.close();
     }
 
-    /*inserta un contacto en la BD*/
+    /*inserta un usuario en la BD*/
     public void insertarContacto(String username, String pass) {
         String consultaSQL = "INSERT INTO contactos VALUES('" + username + "', '" + pass.hashCode() + "') ";
         db.execSQL(consultaSQL);
     }
 
-    /*devuelve todos los contactos*/
-    public Cursor listarUsuarios() {
-        return db.rawQuery("SELECT * FROM Contactos", null);
-    }
 }
