@@ -1,14 +1,14 @@
 package com.example.crm_alvarez_diaz;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
-
-import com.example.crm_alvarez_diaz.ui.clientes.ClientesFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
-
+import androidx.appcompat.app.AlertDialog;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -18,7 +18,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,15 +41,10 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_clientes, R.id.nav_proveedores, R.id.nav_tareas, R.id.nav_estadisticas)
-                .setDrawerLayout(drawer)
-                .build();
+        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_clientes, R.id.nav_proveedores, R.id.nav_tareas, R.id.nav_estadisticas).setDrawerLayout(drawer).build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
-
     }
 
     @Override
@@ -66,4 +60,20 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.action_settings:
+//                Log.d("LogCat", "Pulsó la opción de menú Acerca de...");
+//                //Se muestra una ventana de diálogo
+//                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//                builder.setTitle("Acerca de...");
+//                builder.setMessage("Aplicación creada por Javier Álvarez y Alberto Díaz para el trabajo sobre la creación de un CRM de Gestión de Sistemas de Información");
+//                builder.setPositiveButton("OK", null);
+//                builder.create();
+//                builder.show();
+//                break;
+//        }
+//        return true;
+//    }
 }
