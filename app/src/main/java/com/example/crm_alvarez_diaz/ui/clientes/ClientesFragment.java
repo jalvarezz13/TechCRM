@@ -17,6 +17,9 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.crm_alvarez_diaz.AdaptadorListaContactos;
+import com.example.crm_alvarez_diaz.Contacto;
+import com.example.crm_alvarez_diaz.MainActivity;
 import com.example.crm_alvarez_diaz.R;
 
 import java.util.ArrayList;
@@ -57,39 +60,7 @@ public class ClientesFragment extends Fragment {
         return root;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_settings:
-                Log.d("LogCat", "Pulsó la opción de menú Acerca de...");
-                //Se muestra una ventana de diálogo
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Acerca de...");
-                builder.setMessage("Aplicación creada por Javier Álvarez y Alberto Díaz para el trabajo sobre la creación de un CRM de Gestión de Sistemas de Información");
-                builder.setPositiveButton("OK", null);
-                builder.create();
-                builder.show();
-                break;
-        }
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_settings:
-                Log.d("LogCat", "Pulsó la opción de menú Acerca de...");
-                //Se muestra una ventana de diálogo
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Acerca de...");
-                builder.setMessage("Aplicación creada por Javier Álvarez y Alberto Díaz para el trabajo sobre la creación de un CRM de Gestión de Sistemas de Información");
-                builder.setPositiveButton("OK", null);
-                builder.create();
-                builder.show();
-                break;
-        }
-        return true;
-    }
 
     public void rellenarDatosPrueba() {
         contactos.add(new Contacto("María Rodríguez", "234 123 411", 1, "mariarodriguez@correo.com", "C/Ronda, 10"));

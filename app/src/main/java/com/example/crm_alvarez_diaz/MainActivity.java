@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
+
     public void oyente_btnRegistrarAqui(View view) {
         setContentView(R.layout.activity_registro);
     }
