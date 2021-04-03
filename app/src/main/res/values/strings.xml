@@ -19,4 +19,13 @@
     <string name="user">Usuario:</string>
     <string name="pass">Contraseña:</string>
     <string name="iniciarSesion">Iniciar sesión</string>
+    <string name="registryForm">FORMULARIO DE REGISTRO</string>
+    <string name="email">Correo:</string>
+    <string name="name">Nombre:</string>
+    <string name="phone">Teléfono:</string>
+    <string name="repeatPass">Repetir contraseña:</string>
+    <string name="username">Nombre de usuario:</string>
+    <string name="termsAndConditions">Acepto los términos y condiciones de CRM Álvarez Díaz</string>
+    <string name="registry">REGISTRAR</string>
+    <string name="introduceYourData">Introduce tus datos:</string>
 </resources>
