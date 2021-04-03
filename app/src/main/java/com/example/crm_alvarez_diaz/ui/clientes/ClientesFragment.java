@@ -1,21 +1,22 @@
 package com.example.crm_alvarez_diaz.ui.clientes;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.crm_alvarez_diaz.AdaptadorListaContactos;
-import com.example.crm_alvarez_diaz.Contacto;
 import com.example.crm_alvarez_diaz.R;
 
 import java.util.ArrayList;
@@ -56,6 +57,39 @@ public class ClientesFragment extends Fragment {
         return root;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Log.d("LogCat", "Pulsó la opción de menú Acerca de...");
+                //Se muestra una ventana de diálogo
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Acerca de...");
+                builder.setMessage("Aplicación creada por Javier Álvarez y Alberto Díaz para el trabajo sobre la creación de un CRM de Gestión de Sistemas de Información");
+                builder.setPositiveButton("OK", null);
+                builder.create();
+                builder.show();
+                break;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Log.d("LogCat", "Pulsó la opción de menú Acerca de...");
+                //Se muestra una ventana de diálogo
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Acerca de...");
+                builder.setMessage("Aplicación creada por Javier Álvarez y Alberto Díaz para el trabajo sobre la creación de un CRM de Gestión de Sistemas de Información");
+                builder.setPositiveButton("OK", null);
+                builder.create();
+                builder.show();
+                break;
+        }
+        return true;
+    }
 
     public void rellenarDatosPrueba() {
         contactos.add(new Contacto("María Rodríguez", "234 123 411", 1, "mariarodriguez@correo.com", "C/Ronda, 10"));

@@ -28,7 +28,7 @@ public class ConectorBD {
 
     /*inserta un usuario en la BD*/
     public void insertarContacto(String username, String pass) {
-        String consultaSQL = "INSERT INTO contactos VALUES('" + username + "', '" + pass.hashCode() + "') ";
+        String consultaSQL = "INSERT INTO contactos VALUES('" + username + "', '" + pass.hashCode() + "') "; // CAMBIAAAAAAAAAAAAAAAAAAAAR
         db.execSQL(consultaSQL);
     }
 

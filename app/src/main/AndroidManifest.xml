@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.crm_alvarez_diaz">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/pngegg"
@@ -9,6 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CRM_Alvarez_Diaz">
+        <activity android:name=".Bienvenido" />
+        <activity android:name=".Registro">
+            android:parentActivityName=".Bienvenido"
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Bienvenido" />
+        </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

@@ -18,18 +18,9 @@ public class TareasFragment extends Fragment {
 
     private TareasViewModel tareasViewModel;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        tareasViewModel =
-                new ViewModelProvider(this).get(TareasViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+//        tareasViewModel = new ViewModelProvider(this).get(TareasViewModel.class);
         View root = inflater.inflate(R.layout.fragment_tareas, container, false);
-        final TextView textView = root.findViewById(R.id.text_sld);
-        tareasViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
         return root;
     }
 }
