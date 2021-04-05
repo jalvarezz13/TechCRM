@@ -10,6 +10,7 @@ public class Bienvenido extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_bienvenido);
     }
     public void oyente_btnRegistrarAqui(View view) {

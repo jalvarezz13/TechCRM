@@ -37,4 +37,5 @@
     -->
     <string name="hello_world">Hello Square World!</string>
     <string name="title_activity_registro">Registro</string>
+    <string name="volver">Volver a Inicio</string>
 </resources>
