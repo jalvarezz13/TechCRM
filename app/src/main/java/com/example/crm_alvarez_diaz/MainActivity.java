@@ -2,11 +2,9 @@ package com.example.crm_alvarez_diaz;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
-import android.widget.Button;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -20,10 +18,6 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
@@ -67,7 +61,21 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
 
+        if (item.getItemId() == R.id.action_settings) {
+            Log.d("LogCat", "Pulsó la opción de menú Acerca de...");
+            //Se muestra una ventana de diálogo
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Acerca de...");
+            builder.setMessage("Aplicación creada por Javier Álvarez y Alberto Díaz para el trabajo sobre la creación de un CRM de Gestión de Sistemas de Información");
+            builder.setPositiveButton("OK", null);
+            builder.create();
+            builder.show();
+        }
+        return false;
+    }
 
     public void oyente_btnRegistrarAqui(View view) {
         setContentView(R.layout.activity_registro);
