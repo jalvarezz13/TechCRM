@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -34,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
             }
         });
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -69,16 +68,12 @@ public class MainActivity extends AppCompatActivity {
             //Se muestra una ventana de diálogo
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Acerca de...");
-            builder.setMessage("Aplicación creada por Javier Álvarez y Alberto Díaz para el trabajo sobre la creación de un CRM de Gestión de Sistemas de Información");
+            builder.setMessage("Aplicación creada por Javier Álvarez y Alberto Díaz para el trabajo sobre CRM de Gestión de Sistemas de Información");
             builder.setPositiveButton("OK", null);
             builder.create();
             builder.show();
         }
         return false;
-    }
-
-    public void oyente_btnRegistrarAqui(View view) {
-        setContentView(R.layout.activity_registro);
     }
 
 }
