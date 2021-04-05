@@ -27,5 +27,4 @@ public class Registro extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }
