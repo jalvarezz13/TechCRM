@@ -14,6 +14,7 @@ public class Registro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
+        getSupportActionBar().hide();
 
         atras = (Button) findViewById(R.id.btnVolverRegistro);
         atras.setOnClickListener(new View.OnClickListener() {
@@ -22,9 +23,5 @@ public class Registro extends AppCompatActivity {
                 startActivity(new Intent(Registro.this, Bienvenido.class));
             }
         });
-
-
     }
-
-
 }

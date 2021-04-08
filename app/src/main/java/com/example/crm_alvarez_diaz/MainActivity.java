@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -75,5 +76,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
-
 }

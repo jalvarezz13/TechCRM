@@ -14,10 +14,10 @@ public class Bienvenido extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bienvenido);
+        getSupportActionBar().hide();
     }
 
     public void oyente_btnRegistrarAqui(View view) {
-
         startActivity(new Intent(Bienvenido.this, Registro.class));
     }
 
