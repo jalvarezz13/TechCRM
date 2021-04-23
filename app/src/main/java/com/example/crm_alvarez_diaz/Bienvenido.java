@@ -21,4 +21,8 @@ public class Bienvenido extends AppCompatActivity {
         startActivity(new Intent(Bienvenido.this, Registro.class));
     }
 
+    public void oye_btnIniciarSesion(View view) {
+        startActivity(new Intent(Bienvenido.this, MainActivity.class));
+    }
+
 }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 public class ConectorBD {
     static final String NOMBRE_BD = "AgendaLocal";
@@ -23,13 +24,20 @@ public class ConectorBD {
 
     /*Cierra la conexión con la base de datos*/
     public void cerrar() {
-        if (db != null) db.close();
+        if (db != null)
+            db.close();
     }
 
     /*inserta un usuario en la BD*/
-    public void insertarContacto(String username, String pass) {
-        String consultaSQL = "INSERT INTO contactos VALUES('" + username + "', '" + pass.hashCode() + "') "; // CAMBIAAAAAAAAAAAAAAAAAAAAR
-        db.execSQL(consultaSQL);
+    public void insertarUsuario(String name, String username, String phone, String email, String pass) {
+        String consulta = "INSERT INTO Usuarios (name, username, phone, email, pass) VALUES('" + name + "', '" + username + "', '" + phone + "', '" + email + "', '" + pass + "')";
+        Log.d("dbconsulta", consulta);
+        db.execSQL(consulta);
     }
 
+    public String autenticarUsuario(String username) {
+        Cursor c = db.rawQuery("SELECT pass FROM Usuarios WHERE username='" + username + "'", null);
+        Log.d("db", c.toString());
+        return "";
+    }
 }

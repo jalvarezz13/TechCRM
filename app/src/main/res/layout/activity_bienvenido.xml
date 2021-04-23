@@ -90,6 +90,7 @@
             android:insetLeft="20dp"
             android:insetTop="30dp"
             android:insetRight="20dp"
+            android:onClick="oye_btnIniciarSesion"
             android:text="@string/iniciarSesion"
             android:textSize="24sp" />
 
