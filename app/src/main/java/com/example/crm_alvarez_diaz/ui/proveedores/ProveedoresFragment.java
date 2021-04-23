@@ -56,9 +56,9 @@ public class ProveedoresFragment extends Fragment {
     }
 
     public void rellenarDatosPrueba() {
-        proveedores.add(new Contacto("ISP Informática", "954 564 321", 2, "isp-inf@correo.com", "C/Arenas, 10"));
-        proveedores.add(new Contacto("Intel España", "953 532 631", 2, "soporte@intel.es", "C/Rey Felipe VI, 1"));
-        proveedores.add(new Contacto("Soporte NVIDIA", "932 442 654", 2, "soporte@intel.com", "C/Ancha, 7"));
+        proveedores.add(new Contacto("ISP Informática", 15,"954 564 321", 2, "isp-inf@correo.com", "C/Arenas, 10"));
+        proveedores.add(new Contacto("Intel España", 2,"953 532 631", 2, "soporte@intel.es", "C/Rey Felipe VI, 1"));
+        proveedores.add(new Contacto("Soporte NVIDIA", 3,"932 442 654", 2, "soporte@intel.com", "C/Ancha, 7"));
     }
 
 }

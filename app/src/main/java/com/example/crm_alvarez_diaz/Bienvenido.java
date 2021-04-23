@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
-public class Bienvenido extends AppCompatActivity {
+public  class Bienvenido extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,11 +17,11 @@ public class Bienvenido extends AppCompatActivity {
         getSupportActionBar().hide();
     }
 
-    public void oyente_btnRegistrarAqui(View view) {
+    /*public void oyente_btnRegistrarAqui(View view) {
         startActivity(new Intent(Bienvenido.this, Registro.class));
-    }
+    }*/
 
-    public void oye_btnIniciarSesion(View view) {
+   public void oye_btnIniciarSesion(View view) {
         startActivity(new Intent(Bienvenido.this, MainActivity.class));
     }
 

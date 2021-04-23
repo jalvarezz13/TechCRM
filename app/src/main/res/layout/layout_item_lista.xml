@@ -19,23 +19,30 @@
         android:layout_weight="1" />
 
     <LinearLayout
-        android:layout_width="300sp"
+        android:layout_width="268dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/lblNombre"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/lblTelefono"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:text="TextView"
             android:textSize="18sp" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imFav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
 
 </LinearLayout>

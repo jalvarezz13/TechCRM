@@ -82,15 +82,15 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/iniciarSesion"
+            android:id="@+id/btnIniciarSesion"
             android:layout_width="wrap_content"
             android:layout_height="85dp"
             android:layout_weight="1"
+            android:onClick="oye_btnIniciarSesion"
             android:backgroundTint="#BF000000"
             android:insetLeft="20dp"
             android:insetTop="30dp"
             android:insetRight="20dp"
-            android:onClick="oye_btnIniciarSesion"
             android:text="@string/iniciarSesion"
             android:textSize="24sp" />
 

@@ -1,5 +1,6 @@
 package com.example.crm_alvarez_diaz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -75,5 +76,8 @@ public class MainActivity extends AppCompatActivity {
             builder.show();
         }
         return false;
+    }
+    public void oyente_btnIniciarSesion(View view){
+        startActivity(new Intent(MainActivity.this, Bienvenido.class));
     }
 }

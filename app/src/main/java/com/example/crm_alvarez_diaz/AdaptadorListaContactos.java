@@ -18,12 +18,14 @@ public class AdaptadorListaContactos extends
         private TextView lblNombre;
         private TextView lblTelefono;
         private ImageView imContacto;
+        private ImageView imFav;
 
         public ContactoViewHolder(View view) {
             super(view);
             lblNombre = view.findViewById(R.id.lblNombre);
             lblTelefono = view.findViewById(R.id.lblTelefono);
             imContacto = view.findViewById(R.id.imContacto);
+            imFav = view.findViewById(R.id.imFav);
         }
     }
 
@@ -42,6 +44,13 @@ public class AdaptadorListaContactos extends
         Contacto contacto = contactos.get(position);
         holder.lblNombre.setText(contactos.get(position).getNombre());
         holder.lblTelefono.setText(contactos.get(position).getTelefono());
+
+        if(contacto.getNpedidos()>=10)
+            holder.imFav.setVisibility(View.VISIBLE);
+        else
+            holder.imFav.setVisibility(View.INVISIBLE);
+
+
         switch (contactos.get(position).getTipo()) {
             case 1: //Cargar imagen de contactos tipo "familia"
                 holder.imContacto.setImageResource(R.drawable.avatar);
