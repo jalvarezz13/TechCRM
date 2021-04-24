@@ -3,43 +3,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="150sp"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/imFav"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/estrella_amarilla" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="100dp"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imContacto"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
                 android:layout_gravity="bottom|center"
                 app:srcCompat="@drawable/avatardefault_92824" />
 
-            <ImageView
-                android:id="@+id/imFav"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="bottom|center"
-                app:srcCompat="@drawable/estrella_amarilla" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="258dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="100dp"
             android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
 
             <TextView
                 android:id="@+id/lblNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/lblCorreoCliente"
@@ -56,31 +68,38 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="47dp"
-            android:layout_height="match_parent"
+            android:layout_width="112dp"
+            android:layout_height="100dp"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="45sp"
+                    android:layout_height="45sp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/whatsapp_logo_11" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="45sp"
+                    android:layout_height="45sp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/gmail_google" />
+            </LinearLayout>
 
             <ImageButton
                 android:id="@+id/imageButton"
-                android:layout_width="50sp"
-                android:layout_height="50sp"
+                android:layout_width="45sp"
+                android:layout_height="45sp"
                 android:foregroundGravity="center"
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/phone" />
 
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="50sp"
-                android:layout_height="50sp"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/whatsapp_logo_11" />
-
-            <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="50sp"
-                android:layout_height="50sp"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/gmail_google" />
         </LinearLayout>
 
     </TableRow>
