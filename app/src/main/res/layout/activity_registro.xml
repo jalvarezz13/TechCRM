@@ -161,7 +161,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/lblCorreo"
+            android:id="@+id/lblCorreoCliente"
             android:layout_width="13dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="5sp"

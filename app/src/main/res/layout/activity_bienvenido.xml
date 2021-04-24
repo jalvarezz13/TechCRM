@@ -86,7 +86,6 @@
             android:layout_width="wrap_content"
             android:layout_height="85dp"
             android:layout_weight="1"
-            android:onClick="oye_btnIniciarSesion"
             android:backgroundTint="#BF000000"
             android:insetLeft="20dp"
             android:insetTop="30dp"

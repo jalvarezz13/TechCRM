@@ -1,11 +1,13 @@
 package com.example.crm_alvarez_diaz;
 
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -23,6 +25,7 @@ import androidx.appcompat.widget.Toolbar;
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,8 +79,5 @@ public class MainActivity extends AppCompatActivity {
             builder.show();
         }
         return false;
-    }
-    public void oyente_btnIniciarSesion(View view){
-        startActivity(new Intent(MainActivity.this, Bienvenido.class));
     }
 }

@@ -10,8 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class AdaptadorListaContactos extends
-        RecyclerView.Adapter<AdaptadorListaContactos.ContactoViewHolder> {
+public class AdaptadorListaContactos extends RecyclerView.Adapter<AdaptadorListaContactos.ContactoViewHolder> {
     private ArrayList<Contacto> contactos;
 
     public class ContactoViewHolder extends RecyclerView.ViewHolder {
@@ -45,7 +44,7 @@ public class AdaptadorListaContactos extends
         holder.lblNombre.setText(contactos.get(position).getNombre());
         holder.lblTelefono.setText(contactos.get(position).getTelefono());
 
-        if(contacto.getNpedidos()>=10)
+        if (contacto.getNpedidos() >= 10)
             holder.imFav.setVisibility(View.VISIBLE);
         else
             holder.imFav.setVisibility(View.INVISIBLE);

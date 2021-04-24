@@ -37,7 +37,8 @@ public class ConectorBD {
 
     public String autenticarUsuario(String username) {
         Cursor c = db.rawQuery("SELECT pass FROM Usuarios WHERE username='" + username + "'", null);
-        Log.d("db", c.toString());
-        return "";
+        c.moveToFirst();
+        Log.d("dbconsulta", c.getString(0));
+        return c.getString(0);
     }
 }
