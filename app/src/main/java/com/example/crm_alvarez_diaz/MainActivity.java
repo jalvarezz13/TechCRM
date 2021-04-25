@@ -1,6 +1,12 @@
 package com.example.crm_alvarez_diaz;
 
 import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -9,6 +15,7 @@ import android.view.Menu;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.crm_alvarez_diaz.ui.clientes.ClientesFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -21,6 +28,8 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
@@ -79,5 +88,28 @@ public class MainActivity extends AppCompatActivity {
             builder.show();
         }
         return false;
+    }
+    public void oyente_btnTlf(View view){
+        Log.d("Consulta ", view.toString());
+        //ntel.getText().toString()
+        String uri = "tel:" + "666" ;
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse(uri));
+        startActivity(intent);
+    }
+
+    public void oyente_btnWP(View view){
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.setComponent(ComponentName.unflattenFromString("com.google.android.apps.maps"));
+        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+    public void oyente_btnGM(View view){
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.setComponent(ComponentName.unflattenFromString("com.android.phone"));
+        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }

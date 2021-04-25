@@ -78,27 +78,30 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/imageButton2"
+                    android:id="@+id/btnWP"
                     android:layout_width="45sp"
                     android:layout_height="45sp"
                     android:scaleType="centerInside"
-                    app:srcCompat="@drawable/whatsapp_logo_11" />
+                    app:srcCompat="@drawable/whatsapp_logo_11"
+                    android:onClick="oyente_btnWP"/>
 
                 <ImageButton
-                    android:id="@+id/imageButton3"
+                    android:id="@+id/btnGM"
                     android:layout_width="45sp"
                     android:layout_height="45sp"
                     android:scaleType="centerInside"
-                    app:srcCompat="@drawable/gmail_google" />
+                    app:srcCompat="@drawable/gmail_google"
+                    android:onClick="oyente_btnGM"/>
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/btnTlf"
                 android:layout_width="45sp"
                 android:layout_height="45sp"
                 android:foregroundGravity="center"
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/phone" />
+                app:srcCompat="@drawable/phone"
+                android:onClick="oyente_btnTlf" />
 
         </LinearLayout>
 
