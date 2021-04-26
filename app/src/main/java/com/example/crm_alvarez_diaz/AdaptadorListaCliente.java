@@ -8,8 +8,6 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 public class AdaptadorListaCliente extends RecyclerView.Adapter<AdaptadorListaCliente.ClienteViewHolder> {
@@ -27,9 +25,9 @@ public class AdaptadorListaCliente extends RecyclerView.Adapter<AdaptadorListaCl
             super(view);
             lblNombre = view.findViewById(R.id.lblNombre);
             lblTelefono = view.findViewById(R.id.lblTelefono);
-            lblEmail = view.findViewById(R.id.lblCorreoCliente);
+            lblEmail = view.findViewById(R.id.lblCorreoProveedor);
             lblUltimaConexion = view.findViewById(R.id.lblUltConexion);
-            imContacto = view.findViewById(R.id.imContacto);
+            imContacto = view.findViewById(R.id.imCliente);
             imFav = view.findViewById(R.id.imFav);
         }
     }

@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
     public void oyente_btnTlf(View view){
-        Log.d("Consulta ", view.toString());
+        //Log.d("Consulta ", view.toString());
         //ntel.getText().toString()
         String uri = "tel:" + "666" ;
         Intent intent = new Intent(Intent.ACTION_DIAL);
