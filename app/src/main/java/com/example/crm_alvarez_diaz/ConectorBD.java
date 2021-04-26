@@ -7,13 +7,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 public class ConectorBD {
-    static final String NOMBRE_BD = "AgendaLocal";
-    private UsuarioSQLiteHelper dbHelper;
+    static final String NOMBRE_BD = "CRM_DB";
+    private SQLiteHelper dbHelper;
     private SQLiteDatabase db;
 
     /*Constructor*/
     public ConectorBD(Context ctx) {
-        dbHelper = new UsuarioSQLiteHelper(ctx, NOMBRE_BD, null, 1);
+        dbHelper = new SQLiteHelper(ctx, NOMBRE_BD, null, 1);
     }
 
     /*Abre la conexión con la base de datos*/
@@ -30,15 +30,25 @@ public class ConectorBD {
 
     /*inserta un usuario en la BD*/
     public void insertarUsuario(String name, String username, String phone, String email, String pass) {
-        String consulta = "INSERT INTO Usuarios (name, username, phone, email, pass) VALUES('" + name + "', '" + username + "', '" + phone + "', '" + email + "', '" + pass + "')";
+        String consulta = "INSERT INTO Usuario (name, username, phone, email, pass) VALUES('" + name + "', '" + username + "', '" + phone + "', '" + email + "', '" + pass + "')";
         Log.d("dbconsulta", consulta);
         db.execSQL(consulta);
     }
 
     public String autenticarUsuario(String username) {
-        Cursor c = db.rawQuery("SELECT pass FROM Usuarios WHERE username='" + username + "'", null);
+        Cursor c = db.rawQuery("SELECT pass FROM Usuario WHERE username='" + username + "'", null);
         c.moveToFirst();
         Log.d("dbconsulta", c.getString(0));
         return c.getString(0);
+    }
+
+    public void insertarCliente(String name, String phone, String email, Integer numPedidos) {
+        String consulta = "INSERT INTO Cliente (name, phone, email, ultConexion, numPedidos) VALUES('" + name + "', '" + phone + "', '" + email + "', 'Nunca', " + numPedidos + ")";
+        Log.d("dbconsulta", consulta);
+        db.execSQL(consulta);
+    }
+
+    public Cursor obtenerClientes() {
+        return db.rawQuery("SELECT * FROM Cliente", null);
     }
 }

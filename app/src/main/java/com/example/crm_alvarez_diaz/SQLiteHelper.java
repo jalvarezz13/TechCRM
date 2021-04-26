@@ -6,14 +6,15 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 
-public class UsuarioSQLiteHelper extends SQLiteOpenHelper {
+public class SQLiteHelper extends SQLiteOpenHelper {
     /**
      * Sentencia SQL para crear la tabla de Contactos
-     * */
-    
-    String sqlCrearTabla = "CREATE TABLE Usuarios(name TEXT, username TEXT, phone TEXT, email TEXT, pass TEXT)";
+     */
 
-    public UsuarioSQLiteHelper(Context contexto, String nombreBD, SQLiteDatabase.CursorFactory factory, int versionBD) {
+    String sqlCrearUsuario = "CREATE TABLE Usuario(name TEXT, username TEXT, phone TEXT, email TEXT, pass TEXT)";
+    String sqlCrearCliente = "CREATE TABLE Cliente(name TEXT, phone TEXT, email TEXT, ultConexion TEXT, numPedidos INTEGER)";
+
+    public SQLiteHelper(Context contexto, String nombreBD, SQLiteDatabase.CursorFactory factory, int versionBD) {
         super(contexto, nombreBD, factory, versionBD);
     }
 
@@ -21,7 +22,8 @@ public class UsuarioSQLiteHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         try {
             /*Se ejecuta la sentencia SQL de creación de la tabla*/
-            db.execSQL(sqlCrearTabla);
+            db.execSQL(sqlCrearUsuario);
+            db.execSQL(sqlCrearCliente);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -34,9 +36,11 @@ public class UsuarioSQLiteHelper extends SQLiteOpenHelper {
  la tabla antigua a la nueva, por lo que este método debería ser más elaborado.*/
         try {
             /*Se elimina la versión anterior de la table*/
-            db.execSQL("DROP TABLE IF EXISTS Usuarios");
+            db.execSQL("DROP TABLE IF EXISTS Usuario");
+            db.execSQL("DROP TABLE IF EXISTS Cliente");
             /*Se crea la nueva versión de la table*/
-            db.execSQL(sqlCrearTabla);
+            db.execSQL(sqlCrearUsuario);
+            db.execSQL(sqlCrearCliente);
         } catch (SQLException e) {
             e.printStackTrace();
         }
