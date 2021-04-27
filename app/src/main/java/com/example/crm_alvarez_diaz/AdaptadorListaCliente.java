@@ -1,10 +1,15 @@
 package com.example.crm_alvarez_diaz;
 
+import android.content.Intent;
+import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,15 +25,17 @@ public class AdaptadorListaCliente extends RecyclerView.Adapter<AdaptadorListaCl
         private TextView lblUltimaConexion;
         private ImageView imContacto;
         private ImageView imFav;
+        private ImageButton btnLlamar;
 
         public ClienteViewHolder(View view) {
             super(view);
-            lblNombre = view.findViewById(R.id.lblNombre);
-            lblTelefono = view.findViewById(R.id.lblTelefono);
-            lblEmail = view.findViewById(R.id.lblCorreoProveedor);
-            lblUltimaConexion = view.findViewById(R.id.lblUltConexion);
+            lblNombre = view.findViewById(R.id.lblNombreCliente);
+            lblTelefono = view.findViewById(R.id.lblTelefonoCliente);
+            lblEmail = view.findViewById(R.id.lblCorreoCliente);
+            lblUltimaConexion = view.findViewById(R.id.lblUltConexionCliente);
             imContacto = view.findViewById(R.id.imCliente);
-            imFav = view.findViewById(R.id.imFav);
+            imFav = view.findViewById(R.id.imFavCliente);
+            btnLlamar = view.findViewById(R.id.btnLlamarCliente);
         }
     }
 
@@ -56,6 +63,17 @@ public class AdaptadorListaCliente extends RecyclerView.Adapter<AdaptadorListaCl
             holder.imFav.setVisibility(View.INVISIBLE);
 
         holder.imContacto.setImageResource(R.drawable.avatar);
+
+        holder.btnLlamar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String uri = "tel: " + cliente.getPhone();
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(uri));
+                Log.d("btnControl", uri);
+//                startActivity(intent);
+            }
+        });
     }
 
     @Override

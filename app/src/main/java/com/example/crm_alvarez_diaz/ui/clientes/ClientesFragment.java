@@ -43,7 +43,7 @@ public class ClientesFragment extends Fragment {
         clientes = new ArrayList<Cliente>();
         //Método que rellena el array con datos de prueba
         rellenarDatosPrueba();
-        ordenarContactos();
+//        ordenarContactos();
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
         lstContactos.setLayoutManager(mLayoutManager);

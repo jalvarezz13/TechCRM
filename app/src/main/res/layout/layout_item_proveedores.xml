@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -17,20 +17,20 @@
             app:srcCompat="@drawable/building" />
 
         <ImageView
-            android:id="@+id/imFav"
-            app:srcCompat="@drawable/estrella_amarilla"
+            android:id="@+id/imFavProveedor"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_gravity="bottom|center" />
+            android:layout_gravity="bottom|center"
+            app:srcCompat="@drawable/estrella_amarilla" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="240dp"
+        android:layout_width="260dp"
         android:layout_height="150dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/lblNombre"
+            android:id="@+id/lblNombreProveedor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
@@ -44,7 +44,7 @@
             android:text="example@mail.com" />
 
         <TextView
-            android:id="@+id/lblTelefono"
+            android:id="@+id/lblTelefonoProveedor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView" />
@@ -52,16 +52,17 @@
         <View
             android:id="@+id/divider2"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="56dp" />
 
         <TextView
-            android:id="@+id/lblDireccion"
+            android:id="@+id/lblDeudaProveedor"
             android:layout_width="match_parent"
             android:layout_height="21dp"
             android:layout_gravity="right"
             android:layout_marginRight="5sp"
-            android:gravity="left"
-            android:text="TextView" />
+            android:gravity="right"
+            android:text="TextView"
+            android:textColor="#33D35B" />
 
     </LinearLayout>
 
@@ -71,32 +72,32 @@
         android:orientation="vertical">
 
         <ImageButton
-            android:id="@+id/imTlf"
-            app:srcCompat="@drawable/phone"
+            android:id="@+id/btnLlamarProveedor"
             android:layout_width="50sp"
             android:layout_height="50sp"
             android:foregroundGravity="center"
-            android:scaleType="centerInside"
             android:onClick="oyente_btnTlf"
-            android:src="@drawable/phone" />
+            android:scaleType="centerInside"
+            android:src="@drawable/phone"
+            app:srcCompat="@drawable/phone" />
 
         <ImageButton
-            android:id="@+id/imWP"
-            app:srcCompat="@drawable/whatsapp_logo_11"
+            android:id="@+id/btnWhatsAppProveedor"
             android:layout_width="50sp"
             android:layout_height="50sp"
-            android:scaleType="centerInside"
             android:onClick="oyente_btnWP"
-            android:src="@drawable/whatsapp_logo_11" />
+            android:scaleType="centerInside"
+            android:src="@drawable/whatsapp_logo_11"
+            app:srcCompat="@drawable/whatsapp_logo_11" />
 
         <ImageButton
-            android:id="@+id/imGM"
-            app:srcCompat="@drawable/gmail_google"
+            android:id="@+id/btnCorreoProveedor"
             android:layout_width="50sp"
             android:layout_height="50sp"
-            android:scaleType="centerInside"
             android:onClick="oyente_btnGM"
-            android:src="@drawable/gmail_google" />
+            android:scaleType="centerInside"
+            android:src="@drawable/gmail_google"
+            app:srcCompat="@drawable/gmail_google" />
     </LinearLayout>
 
 

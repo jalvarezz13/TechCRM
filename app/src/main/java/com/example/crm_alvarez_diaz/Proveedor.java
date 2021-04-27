@@ -4,14 +4,14 @@ public class Proveedor {
     private String name;
     private String phone;
     private String email;
-    private String address;
+    private double deuda;
     private int numPedidos;
 
-    public Proveedor(String name, String phone, String email, String addres, int numPedidos) {
+    public Proveedor(String name, String phone, String email, double deuda, int numPedidos) {
         this.name = name;
         this.phone = phone;
         this.email = email;
-        this.address = addres;
+        this.deuda = deuda;
         this.numPedidos = numPedidos;
     }
 
@@ -39,12 +39,12 @@ public class Proveedor {
         this.email = email;
     }
 
-    public String getAddres() {
-        return address;
+    public double getDeuda() {
+        return deuda;
     }
 
-    public void setAddress(String ultConexion) {
-        this.address = address;
+    public void setDeuda(double deuda) {
+        this.deuda = deuda;
     }
 
     public int getNumPedidos() {

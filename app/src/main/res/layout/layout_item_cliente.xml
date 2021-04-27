@@ -15,23 +15,25 @@
             android:layout_width="100sp"
             android:layout_height="100sp"
             android:layout_gravity="bottom|center"
+            android:foregroundGravity="bottom|center"
             app:srcCompat="@drawable/avatardefault_92824" />
 
         <ImageView
-            android:id="@+id/imFav"
+            android:id="@+id/imFavCliente"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="bottom|center"
+            android:foregroundGravity="bottom"
             app:srcCompat="@drawable/estrella_amarilla" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="240dp"
+        android:layout_width="260dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/lblNombre"
+            android:id="@+id/lblNombreCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
@@ -39,13 +41,13 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/lblCorreoProveedor"
+            android:id="@+id/lblCorreoCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="example@mail.com" />
 
         <TextView
-            android:id="@+id/lblTelefono"
+            android:id="@+id/lblTelefonoCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView" />
@@ -53,10 +55,10 @@
         <View
             android:id="@+id/divider2"
             android:layout_width="match_parent"
-            android:layout_height="35dp" />
+            android:layout_height="55dp" />
 
         <TextView
-            android:id="@+id/lblUltConexion"
+            android:id="@+id/lblUltConexionCliente"
             android:layout_width="match_parent"
             android:layout_height="21dp"
             android:layout_gravity="right"
@@ -72,28 +74,25 @@
         android:orientation="vertical">
 
         <ImageButton
-            android:id="@+id/imTlf"
+            android:id="@+id/btnLlamarCliente"
             android:layout_width="50sp"
             android:layout_height="50sp"
             android:foregroundGravity="center"
             android:scaleType="centerInside"
-            android:onClick="oyente_btnTlf"
             app:srcCompat="@drawable/phone" />
 
         <ImageButton
-            android:id="@+id/imWP"
+            android:id="@+id/btnWhatsAppCliente"
             android:layout_width="50sp"
             android:layout_height="50sp"
             android:scaleType="centerInside"
-            android:onClick="oyente_btnWP"
             app:srcCompat="@drawable/whatsapp_logo_11" />
 
         <ImageButton
-            android:id="@+id/imGM"
+            android:id="@+id/btnCorreoCliente"
             android:layout_width="50sp"
             android:layout_height="50sp"
             android:scaleType="centerInside"
-            android:onClick="oyente_btnGM"
             app:srcCompat="@drawable/gmail_google" />
     </LinearLayout>
 

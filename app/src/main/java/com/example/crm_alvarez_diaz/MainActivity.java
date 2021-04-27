@@ -89,27 +89,27 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
-    public void oyente_btnTlf(View view){
-        //Log.d("Consulta ", view.toString());
-        //ntel.getText().toString()
-        String uri = "tel:" + "666" ;
-        Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse(uri));
-        startActivity(intent);
-    }
-
-    public void oyente_btnWP(View view){
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.setComponent(ComponentName.unflattenFromString("com.google.android.apps.maps"));
-        intent.addCategory(Intent.CATEGORY_LAUNCHER);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-    }
-    public void oyente_btnGM(View view){
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.setComponent(ComponentName.unflattenFromString("com.android.phone"));
-        intent.addCategory(Intent.CATEGORY_LAUNCHER);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-    }
+//    public void oyente_btnTlf(View view){
+//        //Log.d("Consulta ", view.toString());
+//        //ntel.getText().toString()
+//        String uri = "tel:" + "666" ;
+//        Intent intent = new Intent(Intent.ACTION_DIAL);
+//        intent.setData(Uri.parse(uri));
+//        startActivity(intent);
+//    }
+//
+//    public void oyente_btnWP(View view){
+//        Intent intent = new Intent(Intent.ACTION_MAIN);
+//        intent.setComponent(ComponentName.unflattenFromString("com.google.android.apps.maps"));
+//        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        startActivity(intent);
+//    }
+//    public void oyente_btnGM(View view){
+//        Intent intent = new Intent(Intent.ACTION_MAIN);
+//        intent.setComponent(ComponentName.unflattenFromString("com.android.phone"));
+//        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        startActivity(intent);
+//    }
 }
