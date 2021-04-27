@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,6 +23,9 @@ public class AdaptadorListaProveedor extends RecyclerView.Adapter<AdaptadorLista
         private TextView lblDeuda;
         private ImageView imProveedor;
         private ImageView imFav;
+        private ImageButton btnLlamar;
+        private ImageButton btnWhatsApp;
+        private ImageButton btnCorreo;
 
         public ProveedorViewHolder(View view) {
             super(view);
@@ -31,6 +35,9 @@ public class AdaptadorListaProveedor extends RecyclerView.Adapter<AdaptadorLista
             lblDeuda = view.findViewById(R.id.lblDeudaProveedor);
             imProveedor = view.findViewById(R.id.imProveedor);
             imFav = view.findViewById(R.id.imFavProveedor);
+            btnLlamar = view.findViewById(R.id.btnLlamarProveedor);
+            btnWhatsApp = view.findViewById(R.id.btnWhatsAppProveedor);
+            btnCorreo = view.findViewById(R.id.btnCorreoProveedor);
         }
     }
 
@@ -63,6 +70,27 @@ public class AdaptadorListaProveedor extends RecyclerView.Adapter<AdaptadorLista
             holder.imFav.setVisibility(View.INVISIBLE);
 
         holder.imProveedor.setImageResource(R.drawable.building);
+
+        holder.btnLlamar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.llamar(proveedor.getPhone(), holder.btnLlamar.getContext());
+            }
+        });
+
+        holder.btnWhatsApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.whatsapp(proveedor.getPhone(), holder.btnWhatsApp.getContext());
+            }
+        });
+
+        holder.btnCorreo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.correo(proveedor.getEmail(), holder.btnCorreo.getContext());
+            }
+        });
     }
 
     @Override

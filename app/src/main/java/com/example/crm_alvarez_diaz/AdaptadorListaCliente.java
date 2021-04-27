@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,6 +27,8 @@ public class AdaptadorListaCliente extends RecyclerView.Adapter<AdaptadorListaCl
         private ImageView imContacto;
         private ImageView imFav;
         private ImageButton btnLlamar;
+        private ImageButton btnWhatsApp;
+        private ImageButton btnCorreo;
 
         public ClienteViewHolder(View view) {
             super(view);
@@ -36,6 +39,8 @@ public class AdaptadorListaCliente extends RecyclerView.Adapter<AdaptadorListaCl
             imContacto = view.findViewById(R.id.imCliente);
             imFav = view.findViewById(R.id.imFavCliente);
             btnLlamar = view.findViewById(R.id.btnLlamarCliente);
+            btnWhatsApp = view.findViewById(R.id.btnWhatsAppCliente);
+            btnCorreo = view.findViewById(R.id.btnCorreoCliente);
         }
     }
 
@@ -67,11 +72,21 @@ public class AdaptadorListaCliente extends RecyclerView.Adapter<AdaptadorListaCl
         holder.btnLlamar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String uri = "tel: " + cliente.getPhone();
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse(uri));
-                Log.d("btnControl", uri);
-//                startActivity(intent);
+                MainActivity.llamar(cliente.getPhone(), holder.btnLlamar.getContext());
+            }
+        });
+
+        holder.btnWhatsApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.whatsapp(cliente.getPhone(), holder.btnWhatsApp.getContext());
+            }
+        });
+
+        holder.btnCorreo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.correo(cliente.getEmail(), holder.btnCorreo.getContext());
             }
         });
     }

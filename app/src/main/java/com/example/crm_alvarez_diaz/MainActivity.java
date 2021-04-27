@@ -58,6 +58,23 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+//        ConectorBD conectorBD = new ConectorBD(this);
+//        conectorBD.abrir();
+//        conectorBD.insertarProveedor("ISP Informática", "954 564 321", "isp-inf@correo.com", 2357.56, 23);
+//        conectorBD.insertarProveedor("Intel España", "953 532 631", "soporte@intel.es", 0, 1);
+//        conectorBD.insertarProveedor("Soporte NVIDIA", "932 442 654", "info@nvidia.com", 1210.95, 12);
+//        conectorBD.insertarCliente("María Rodríguez", "234 123 411", "mariarodriguez@correo.com", 10);
+//        conectorBD.insertarCliente("José Pérez", "234 234 234", "joseperez@correo.com", 8);
+//        conectorBD.insertarCliente("José Ruíz", "545 342 455", "joseruiz@correo.com", 11);
+//        conectorBD.insertarCliente("Carmen López", "666 433 566", "carmenlopez@correo.com", 12);
+//        conectorBD.insertarCliente("María Pérez", "444 564 331", "mariapezar@correo.com", 11);
+//        conectorBD.insertarCliente("José García", "233 223 411", "josegarcia@correo.com", 4);
+//        conectorBD.insertarCliente("José Ruíz", "211 234 234", "joseruiz@correo.com", 6);
+//        conectorBD.insertarCliente("Carmen Ruíz", "544 442 425", "carmenrodriguez@correo.com", 13);
+//        conectorBD.insertarCliente("Carmen Rodríguez", "623 453 335", "carmenrodriguez@correo.com", 5);
+//        conectorBD.insertarCliente("María García", "432 456 331", "mariagarcia@correo.com", 8);
+//        conectorBD.cerrar();
     }
 
     @Override
@@ -89,27 +106,20 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
-//    public void oyente_btnTlf(View view){
-//        //Log.d("Consulta ", view.toString());
-//        //ntel.getText().toString()
-//        String uri = "tel:" + "666" ;
-//        Intent intent = new Intent(Intent.ACTION_DIAL);
-//        intent.setData(Uri.parse(uri));
-//        startActivity(intent);
-//    }
-//
-//    public void oyente_btnWP(View view){
-//        Intent intent = new Intent(Intent.ACTION_MAIN);
-//        intent.setComponent(ComponentName.unflattenFromString("com.google.android.apps.maps"));
-//        intent.addCategory(Intent.CATEGORY_LAUNCHER);
-//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//        startActivity(intent);
-//    }
-//    public void oyente_btnGM(View view){
-//        Intent intent = new Intent(Intent.ACTION_MAIN);
-//        intent.setComponent(ComponentName.unflattenFromString("com.android.phone"));
-//        intent.addCategory(Intent.CATEGORY_LAUNCHER);
-//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//        startActivity(intent);
-//    }
+
+    public static void llamar(String number, Context contexto) {
+        String uri = "tel: " + number;
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse(uri));
+        contexto.startActivity(intent);
+    }
+
+    public static void whatsapp(String number, Context contexto) {
+        contexto.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://api.whatsapp.com/send?phone=34" + number)));
+    }
+
+    public static void correo(String receptor, Context contexto) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", receptor, null));
+        contexto.startActivity(intent);
+    }
 }

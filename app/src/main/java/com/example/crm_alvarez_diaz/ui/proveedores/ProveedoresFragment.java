@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.crm_alvarez_diaz.AdaptadorListaCliente;
 import com.example.crm_alvarez_diaz.AdaptadorListaProveedor;
 import com.example.crm_alvarez_diaz.Cliente;
+import com.example.crm_alvarez_diaz.ConectorBD;
 import com.example.crm_alvarez_diaz.Proveedor;
 import com.example.crm_alvarez_diaz.R;
 

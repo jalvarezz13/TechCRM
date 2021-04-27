@@ -48,8 +48,8 @@ public class ConectorBD {
         db.execSQL(consulta);
     }
 
-    public void insertarProveedor(String name, String phone, String email, String address, Integer numPedidos) {
-        String consulta = "INSERT INTO Proveedor (name, phone, email, address, numPedidos) VALUES('" + name + "', '" + phone + "', '" + email + "', '" +address+ "', " + numPedidos + ")";
+    public void insertarProveedor(String name, String phone, String email, double deuda, Integer numPedidos) {
+        String consulta = "INSERT INTO Proveedor (name, phone, email, deuda, numPedidos) VALUES('" + name + "', '" + phone + "', '" + email + "', " + deuda + ", " + numPedidos + ")";
         Log.d("dbconsulta", consulta);
         db.execSQL(consulta);
     }
@@ -57,6 +57,7 @@ public class ConectorBD {
     public Cursor obtenerClientes() {
         return db.rawQuery("SELECT * FROM Cliente", null);
     }
+
     public Cursor obtenerProveedores() {
         return db.rawQuery("SELECT * FROM Proveedor", null);
     }
