@@ -8,11 +8,14 @@
     tools:context=".ui.tareas.TareasFragment" >
 
     <CalendarView
-        android:id="@+id/calendarView"
+        android:id="@+id/cvCalendario"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:firstDayOfWeek="0"
+        android:showWeekNumber="false" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTareas"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

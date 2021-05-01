@@ -61,7 +61,7 @@ public class AdaptadorListaProveedor extends RecyclerView.Adapter<AdaptadorLista
 
         if (proveedor.getDeuda() > 0) {
             holder.lblDeuda.setTextColor(Color.parseColor("#ffff0000"));
-            holder.lblDeuda.setText("Deuda: -" + Double.toString(proveedor.getDeuda()) + "€ ");
+            holder.lblDeuda.setText("Deuda: - " + Double.toString(proveedor.getDeuda()) + " € ");
         }
 
         if (proveedor.getNumPedidos() >= 10)
