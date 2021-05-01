@@ -44,7 +44,7 @@ public class AddProv extends AppCompatActivity {
                 boolean puedeRegistrarse = true;
                 String listaProblemas = "Por favor, revise los siguientes términos:";
                 if (txtEmpresa.getText().toString().isEmpty()) {
-                    listaProblemas += "\n- El campo 'Nombre' no puede quedar vacío.";
+                    listaProblemas += "\n- El campo 'Empresa' no puede quedar vacío.";
                     puedeRegistrarse = false;
                 }
                 if (txtEmail.getText().toString().isEmpty()) {
