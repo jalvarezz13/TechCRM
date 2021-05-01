@@ -1,205 +1,235 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/anadir_cliente"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_marginLeft="10sp"
     android:layout_marginRight="10sp"
     android:orientation="vertical"
-    tools:context=".Registro">
-
-
-    <Button
-        android:id="@+id/btnVolverCliente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:text="@string/volverCliente"
-        app:icon="@drawable/abc_vector_test" />
+    tools:context=".AddCliente">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:baselineAligned="true"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/lblNombre"
-            android:layout_width="10dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5sp"
-            android:layout_weight="1"
-            android:fontFamily="sans-serif"
-            android:gravity="right"
-            android:text="@string/nombre"
-            android:textAlignment="gravity"
-            android:textColor="#000000"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/ptName"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="5sp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1"
-            android:background="#1A000000"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textColor="#000000"
-            android:textStyle="italic" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:baselineAligned="true"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lblApellido"
-            android:layout_width="13dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5sp"
-            android:layout_weight="1"
-            android:fontFamily="sans-serif"
-            android:gravity="right"
-            android:text="@string/apellido"
-            android:textAlignment="gravity"
-            android:textColor="#000000"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/ptApellido"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="5sp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1"
-            android:background="#1A000000"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textColor="#000000"
-            android:textStyle="italic" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:baselineAligned="true"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lblEmailCliente"
-            android:layout_width="13dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5sp"
-            android:layout_weight="1"
-            android:fontFamily="sans-serif"
-            android:gravity="right"
-            android:text="@string/email"
-            android:textAlignment="gravity"
-            android:textColor="#000000"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/ptEmailCliente"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="5sp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1"
-            android:background="#1A000000"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:textColor="#000000"
-            android:textStyle="italic" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:baselineAligned="true"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lblNewTlf"
-            android:layout_width="13dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5sp"
-            android:layout_weight="1"
-            android:fontFamily="sans-serif"
-            android:gravity="right"
-            android:text="@string/phone"
-            android:textAlignment="gravity"
-            android:textColor="#000000"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/ptNewTlf"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="5sp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1"
-            android:background="#1A000000"
-            android:ems="10"
-            android:inputType="phone"
-            android:textColor="#000000"
-            android:textStyle="italic" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:baselineAligned="true"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lblNpedidos"
-            android:layout_width="13dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5sp"
-            android:layout_weight="1"
-            android:fontFamily="sans-serif"
-            android:gravity="right"
-            android:text="@string/npedidos"
-            android:textAlignment="gravity"
-            android:textColor="#000000"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/ptNpedidos"
+        <Button
+            android:id="@+id/btnVolverCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="number" />
+            android:layout_marginTop="10sp"
+            android:text="VOLVER ATRÁS"
+            app:icon="@drawable/abc_vector_test" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="AÑADIR CLIENTES"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:baselineAligned="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblNombre"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5sp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="right"
+                android:text="@string/nombre"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/ptNameClienteInput"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5sp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:background="#1A000000"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:baselineAligned="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblApellido"
+                android:layout_width="13dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5sp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="right"
+                android:text="@string/apellido"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/ptApellidoClienteInput"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5sp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:background="#1A000000"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:baselineAligned="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblEmailCliente"
+                android:layout_width="13dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5sp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="right"
+                android:text="@string/email"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/ptEmailClienteInput"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5sp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:background="#1A000000"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:textColor="#000000"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:baselineAligned="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblNewTlf"
+                android:layout_width="13dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5sp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="right"
+                android:text="@string/phone"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/ptPhoneClienteInput"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5sp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:background="#1A000000"
+                android:ems="10"
+                android:inputType="phone"
+                android:textColor="#000000"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:baselineAligned="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblNpedidos"
+                android:layout_width="13dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5sp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="right"
+                android:text="@string/npedidos"
+                android:textAlignment="gravity"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/ptNpedidosClienteInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAddCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40sp"
+            android:backgroundTint="#75A6F6"
+            android:text="@string/add" />
+
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnAddCliente"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#75A6F6"
-        android:text="@string/add" />
 
-</LinearLayout>
+</FrameLayout>

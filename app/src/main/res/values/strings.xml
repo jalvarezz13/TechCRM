@@ -40,10 +40,10 @@
     <string name="volver">Volver a Inicio</string>
     <string name="volverCliente">Volver atrás</string>
     <string name="nombre">Nombre: </string>
-    <string name="apellido">1er Apellido: </string>
-    <string name="npedidos">Nº pedidos: </string>
+    <string name="apellido">Primer apellido: </string>
+    <string name="npedidos">Número de pedidos: </string>
     <string name="add">Añadir contacto</string>
-    <string name="empresa">Empresa: </string>
+    <string name="empresa">Nombre de la empresa: </string>
     <string name="deuda">Deuda: </string>
     <string name="add_prov">Añadir Proveedor</string>
 </resources>

@@ -7,6 +7,10 @@ public class Cliente {
     private String ultConexion;
     private int numPedidos;
 
+    public Cliente() {
+
+    }
+
     public Cliente(String name, String phone, String email, int numPedidos) {
         this.name = name;
         this.phone = phone;

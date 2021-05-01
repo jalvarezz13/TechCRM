@@ -66,7 +66,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/ptName"
+            android:id="@+id/ptNameClienteInput"
             android:layout_width="200dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
@@ -102,7 +102,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/ptApellido"
+            android:id="@+id/ptApellidoClienteInput"
             android:layout_width="200dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"

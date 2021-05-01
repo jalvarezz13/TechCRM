@@ -1,11 +1,19 @@
 package com.example.crm_alvarez_diaz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.example.crm_alvarez_diaz.ui.clientes.ClientesFragment;
 
 public class AddCliente extends AppCompatActivity {
     private Button atras;
@@ -17,7 +25,7 @@ public class AddCliente extends AppCompatActivity {
     private EditText txtNpedidos;
     private ConectorBD conectorBD;
 
-    public void addCliente(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_add_cliente);
         getSupportActionBar().hide();
@@ -26,18 +34,18 @@ public class AddCliente extends AppCompatActivity {
         atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                onBackPressed();
             }
         });
 
-        txtNombre = findViewById(R.id.ptName);
-        txtApellido = findViewById(R.id.ptApellido);
-        txtEmail = findViewById(R.id.ptCorreo);
-        txtTlf = findViewById(R.id.ptTlf);
-        txtNpedidos = findViewById(R.id.ptNpedidos);
-
+        txtNombre = findViewById(R.id.ptNameClienteInput);
+        txtApellido = findViewById(R.id.ptApellidoClienteInput);
+        txtEmail = findViewById(R.id.ptEmailClienteInput);
+        txtTlf = findViewById(R.id.ptPhoneClienteInput);
+        txtNpedidos = findViewById(R.id.ptNpedidosClienteInput);
         conectorBD = new ConectorBD(this);
-        addCliente = findViewById(R.id.btnRegistry);
+        addCliente = findViewById(R.id.btnAddCliente);
+
         addCliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +56,7 @@ public class AddCliente extends AppCompatActivity {
                     puedeRegistrarse = false;
                 }
                 if (txtApellido.getText().toString().isEmpty()) {
-                    listaProblemas += "\n- El campo '1er Apellido' no puede quedar vacío.";
+                    listaProblemas += "\n- El campo 'Primer apellido' no puede quedar vacío.";
                     puedeRegistrarse = false;
                 }
                 if (txtEmail.getText().toString().isEmpty()) {
@@ -59,10 +67,14 @@ public class AddCliente extends AppCompatActivity {
                     listaProblemas += "\n- El campo 'Teléfono' no puede quedar vacío.";
                     puedeRegistrarse = false;
                 }
+                if (txtNpedidos.getText().toString().isEmpty()) {
+                    listaProblemas += "\n- El campo 'Número de pedidos' no puede quedar vacío.";
+                    puedeRegistrarse = false;
+                }
 
                 if (puedeRegistrarse) {
                     conectorBD.abrir();
-                    conectorBD.insertarUsuario(txtNombre.getText().toString(), txtApellido.getText().toString(),txtEmail.getText().toString(), txtTlf.getText().toString(), txtNpedidos.getText().toString());
+                    conectorBD.insertarCliente(txtNombre.getText().toString() + " " + txtApellido.getText().toString(), txtEmail.getText().toString(), txtTlf.getText().toString(), Integer.parseInt(txtNpedidos.getText().toString()));
                     conectorBD.cerrar();
                     Toast.makeText(getBaseContext(), "CLIENTE AÑADIDO CORRECTAMENTE", Toast.LENGTH_SHORT).show();
                     txtNombre.setText("");
@@ -70,7 +82,8 @@ public class AddCliente extends AppCompatActivity {
                     txtEmail.setText("");
                     txtTlf.setText("");
                     txtNpedidos.setText("");
-                    finish();
+                    ClientesFragment.rellenarDatos();
+                    onBackPressed();
                 } else {
                     Toast.makeText(getBaseContext(), listaProblemas, Toast.LENGTH_LONG).show();
                 }

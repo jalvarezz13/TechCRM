@@ -12,11 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CRM_Alvarez_Diaz">
-        <activity android:name=".Bienvenido">
-
-        </activity>
+        <activity android:name=".Bienvenido" />
 
         <activity android:name=".Registro" />
+
+        <activity android:name=".AddCliente" />
+
+        <activity android:name=".AddProv"/>
 
         <activity
             android:name=".MainActivity"

@@ -36,8 +36,8 @@ public class Registro extends AppCompatActivity {
             }
         });
 
-        txtName = findViewById(R.id.ptName);
-        txtUsername = findViewById(R.id.ptApellido);
+        txtName = findViewById(R.id.ptNameClienteInput);
+        txtUsername = findViewById(R.id.ptApellidoClienteInput);
         txtEmail = findViewById(R.id.ptCorreo);
         txtPhone = findViewById(R.id.ptTlf);
         txtPass = findViewById(R.id.ptPasswd);

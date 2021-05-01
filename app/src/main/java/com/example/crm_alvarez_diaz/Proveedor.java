@@ -7,6 +7,10 @@ public class Proveedor {
     private double deuda;
     private int numPedidos;
 
+    public Proveedor() {
+
+    }
+
     public Proveedor(String name, String phone, String email, double deuda, int numPedidos) {
         this.name = name;
         this.phone = phone;
