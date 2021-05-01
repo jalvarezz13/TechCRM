@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner1">
+        <item>Seleccione...</item>
+        <item>Ventas</item>
+        <item>Compras</item>
+    </string-array>
+
+    <string-array name="spinner2">
+        <item>Seleccione...</item>
+        <item>Tarjeta Gráfica</item>
+        <item>RAM</item>
+        <item>Procesadores</item>
+        <item>Almacenamiento</item>
+    </string-array>
+</resources>

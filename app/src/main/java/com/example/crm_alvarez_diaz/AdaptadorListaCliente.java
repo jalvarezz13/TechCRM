@@ -14,7 +14,10 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class AdaptadorListaCliente extends RecyclerView.Adapter<AdaptadorListaCliente.ClienteViewHolder> {
     private ArrayList<Cliente> clientes;
@@ -73,6 +76,7 @@ public class AdaptadorListaCliente extends RecyclerView.Adapter<AdaptadorListaCl
             @Override
             public void onClick(View v) {
                 MainActivity.llamar(cliente.getPhone(), holder.btnLlamar.getContext());
+                holder.lblUltimaConexion.setText("Ult. conexión: " +  android.text.format.DateFormat.format("dd/MM/yyyy hh:mm:ss", new java.util.Date()));
             }
         });
 
@@ -80,6 +84,7 @@ public class AdaptadorListaCliente extends RecyclerView.Adapter<AdaptadorListaCl
             @Override
             public void onClick(View v) {
                 MainActivity.whatsapp(cliente.getPhone(), holder.btnWhatsApp.getContext());
+                holder.lblUltimaConexion.setText("Ult. conexión: " +  android.text.format.DateFormat.format("dd/MM/yyyy hh:mm:ss", new java.util.Date()));
             }
         });
 
@@ -87,6 +92,7 @@ public class AdaptadorListaCliente extends RecyclerView.Adapter<AdaptadorListaCl
             @Override
             public void onClick(View v) {
                 MainActivity.correo(cliente.getEmail(), holder.btnCorreo.getContext());
+                holder.lblUltimaConexion.setText("Ult. conexión: " +  android.text.format.DateFormat.format("dd/MM/yyyy hh:mm:ss", new java.util.Date()));
             }
         });
     }
