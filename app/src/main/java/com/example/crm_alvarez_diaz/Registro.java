@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -38,7 +37,7 @@ public class Registro extends AppCompatActivity {
         });
 
         txtName = findViewById(R.id.ptName);
-        txtUsername = findViewById(R.id.ptUsername);
+        txtUsername = findViewById(R.id.ptApellido);
         txtEmail = findViewById(R.id.ptCorreo);
         txtPhone = findViewById(R.id.ptTlf);
         txtPass = findViewById(R.id.ptPasswd);

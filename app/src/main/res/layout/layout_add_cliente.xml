@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginLeft="10sp"
     android:layout_marginRight="10sp"
     android:orientation="vertical"
@@ -11,39 +11,12 @@
 
 
     <Button
-        android:id="@+id/btnVolverRegistro"
+        android:id="@+id/btnVolverCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10sp"
-        android:text="@string/volver"
+        android:text="@string/volverCliente"
         app:icon="@drawable/abc_vector_test" />
-
-    <TextView
-        android:id="@+id/lblTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
-        android:layout_marginBottom="20sp"
-        android:fontFamily="sans-serif-black"
-        android:gravity="center"
-        android:lineSpacingExtra="8sp"
-        android:text="@string/registryForm"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="36sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/lblIntroduce"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#6A6A6A"
-        android:text="@string/introduceYourData"
-        android:textAlignment="textStart"
-        android:textAllCaps="false"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="italic" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -53,14 +26,14 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/lblName"
+            android:id="@+id/lblNombre"
             android:layout_width="10dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="5sp"
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:gravity="right"
-            android:text="@string/name"
+            android:text="@string/nombre"
             android:textAlignment="gravity"
             android:textColor="#000000"
             android:textSize="16sp" />
@@ -79,6 +52,7 @@
             android:inputType="textPersonName"
             android:textColor="#000000"
             android:textStyle="italic" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -96,7 +70,7 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:gravity="right"
-            android:text="@string/username"
+            android:text="@string/apellido"
             android:textAlignment="gravity"
             android:textColor="#000000"
             android:textSize="16sp" />
@@ -115,6 +89,7 @@
             android:inputType="textPersonName"
             android:textColor="#000000"
             android:textStyle="italic" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -125,43 +100,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/lblTlf"
-            android:layout_width="13dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5sp"
-            android:layout_weight="1"
-            android:fontFamily="sans-serif"
-            android:gravity="right"
-            android:text="@string/phone"
-            android:textAlignment="gravity"
-            android:textColor="#000000"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/ptTlf"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="5sp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1"
-            android:background="#1A000000"
-            android:ems="10"
-            android:inputType="phone"
-            android:textColor="#000000"
-            android:textStyle="italic" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:baselineAligned="true"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lblCorreoProveedor"
+            android:id="@+id/lblEmailCliente"
             android:layout_width="13dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="5sp"
@@ -174,7 +113,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/ptCorreo"
+            android:id="@+id/ptEmailCliente"
             android:layout_width="200dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
@@ -198,20 +137,20 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/lblPasswd"
+            android:id="@+id/lblNewTlf"
             android:layout_width="13dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="5sp"
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:gravity="right"
-            android:text="@string/pass"
+            android:text="@string/phone"
             android:textAlignment="gravity"
             android:textColor="#000000"
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/ptPasswd"
+            android:id="@+id/ptNewTlf"
             android:layout_width="200dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
@@ -221,10 +160,9 @@
             android:layout_weight="1"
             android:background="#1A000000"
             android:ems="10"
-            android:inputType="textPassword"
+            android:inputType="phone"
             android:textColor="#000000"
             android:textStyle="italic" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -235,48 +173,33 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/lblRPasswd"
+            android:id="@+id/lblNpedidos"
             android:layout_width="13dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="5sp"
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:gravity="right"
-            android:text="@string/repeatPass"
+            android:text="@string/npedidos"
             android:textAlignment="gravity"
             android:textColor="#000000"
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/ptRPasswd"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="5sp"
-            android:layout_marginBottom="8dp"
+            android:id="@+id/ptNpedidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#1A000000"
             android:ems="10"
-            android:gravity="center|start"
-            android:inputType="textPassword"
-            android:textColor="#000000"
-            android:textStyle="italic" />
+            android:inputType="number" />
 
     </LinearLayout>
 
-    <CheckBox
-        android:id="@+id/cbTerms"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/termsAndConditions"
-        tools:text="@string/termsAndConditions" />
-
     <Button
-        android:id="@+id/btnRegistry"
+        android:id="@+id/btnAddCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#75A6F6"
-        android:text="@string/registry" />
+        android:text="@string/add" />
 
 </LinearLayout>

@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.crm_alvarez_diaz.AdaptadorListaCliente;
+import com.example.crm_alvarez_diaz.AddCliente;
 import com.example.crm_alvarez_diaz.Cliente;
 import com.example.crm_alvarez_diaz.R;
 
@@ -75,6 +76,10 @@ public class ClientesFragment extends Fragment {
                 return new Integer(c2.getNumPedidos()).compareTo(new Integer(c1.getNumPedidos()));
             }
         });
+    }
+
+    public void oyente_btnAddCliente(View view){
+
     }
 
 }

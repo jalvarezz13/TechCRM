@@ -12,8 +12,10 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.crm_alvarez_diaz.ui.clientes.ClientesFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -122,4 +124,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", receptor, null));
         contexto.startActivity(intent);
     }
+
 }
