@@ -59,7 +59,6 @@ public class AddProv extends AppCompatActivity {
                     listaProblemas += "\n- El campo 'Deuda' no puede quedar vacío.";
                     puedeRegistrarse = false;
                 }
-
                 if (puedeRegistrarse) {
                     conectorBD.abrir();
                     conectorBD.insertarUsuario(txtEmpresa.getText().toString(), txtTlf.getText().toString(),txtEmail.getText().toString(), txtDeuda.getText().toString(), txtNpedidos.getText().toString());
