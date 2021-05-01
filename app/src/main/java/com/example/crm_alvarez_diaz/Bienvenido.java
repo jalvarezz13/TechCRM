@@ -25,7 +25,6 @@ public class Bienvenido extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bienvenido);
-        getSupportActionBar().hide();
 
         conectorBD = new ConectorBD(this);
         txtUsername = findViewById(R.id.usernameInput);
