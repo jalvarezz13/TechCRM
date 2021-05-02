@@ -95,6 +95,17 @@ public class ClientesFragment extends Fragment {
         c.close();
         conectorBD.cerrar();
         lstContactos.getAdapter().notifyDataSetChanged();
+
+        clientes.add(new Cliente("María Rodríguez", "234 123 411", "mariarodriguez@correo.com", 10, "29/03/2021 9:24:15"));
+        clientes.add(new Cliente("José Pérez", "234 234 234", "joseperez@correo.com", 8));
+        clientes.add(new Cliente("José Ruíz", "545 342 455", "joseruiz@correo.com", 11, "01/04/2021 12:36:05"));
+        clientes.add(new Cliente("Carmen López", "666 433 566", "carmenlopez@correo.com", 12));
+        clientes.add(new Cliente("María Pérez", "444 564 331", "mariapezar@correo.com", 11));
+        clientes.add(new Cliente("José García", "233 223 411", "josegarcia@correo.com", 4, "15/04/2021 13:34:26"));
+        clientes.add(new Cliente("José Ruíz", "211 234 234", "joseruiz@correo.com", 6));
+        clientes.add(new Cliente("Carmen Ruíz", "544 442 425", "carmenrodriguez@correo.com", 13));
+        clientes.add(new Cliente("Carmen Rodríguez", "623 453 335", "carmenrodriguez@correo.com", 5,"02/05/2021 18:05:01"));
+        clientes.add(new Cliente("María García", "432 456 331", "mariagarcia@correo.com", 8,"10/01/2020 08:57:58"));
     }
 
     public void ordenarClientes() {

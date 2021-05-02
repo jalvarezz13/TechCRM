@@ -74,7 +74,7 @@ public class AddCliente extends AppCompatActivity {
 
                 if (puedeRegistrarse) {
                     conectorBD.abrir();
-                    conectorBD.insertarCliente(txtNombre.getText().toString() + " " + txtApellido.getText().toString(), txtEmail.getText().toString(), txtTlf.getText().toString(), Integer.parseInt(txtNpedidos.getText().toString()));
+                    conectorBD.insertarCliente(txtNombre.getText().toString() + " " + txtApellido.getText().toString(), txtTlf.getText().toString(), txtEmail.getText().toString(), Integer.parseInt(txtNpedidos.getText().toString()));
                     conectorBD.cerrar();
                     Toast.makeText(getBaseContext(), "CLIENTE AÑADIDO CORRECTAMENTE", Toast.LENGTH_SHORT).show();
                     txtNombre.setText("");

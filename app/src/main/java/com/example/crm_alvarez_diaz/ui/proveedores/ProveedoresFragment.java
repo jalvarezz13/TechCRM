@@ -93,6 +93,10 @@ public class ProveedoresFragment extends Fragment {
         c.close();
         conectorBD.cerrar();
         lstProveedores.getAdapter().notifyDataSetChanged();
+
+        proveedores.add(new Proveedor("ISP Informática", "954 564 321", "isp-inf@correo.com", 2357.56, 23));
+        proveedores.add(new Proveedor("Intel España", "953 532 631", "soporte@intel.es", 0, 1));
+        proveedores.add(new Proveedor("Soporte NVIDIA", "932 442 654", "info@nvidia.com", 1210.15, 12));
     }
 
     public void ordenarProv() {

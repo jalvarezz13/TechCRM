@@ -19,6 +19,14 @@ public class Cliente {
         this.numPedidos = numPedidos;
     }
 
+    public Cliente(String name, String phone, String email, int numPedidos, String ultConexion) {
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+        this.ultConexion = ultConexion;
+        this.numPedidos = numPedidos;
+    }
+
     public String getName() {
         return name;
     }
