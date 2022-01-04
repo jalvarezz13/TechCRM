@@ -20,7 +20,7 @@ git clone https://github.com/jalvarezz13/TechCRM
 ## Capturas
 <div align="center">
   <h2>Funcionamiento de la aplicación</h2>
-  <img src="" width="30%" height="">
+  <img src="https://github.com/jalvarezz13/TechCRM/blob/master/images/funcionamiento.gif" width="30%" height="">
 </div>
 
 
