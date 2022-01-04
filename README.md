@@ -3,10 +3,16 @@
 # TechCRM
 ## Contenido
 CRM es la sigla utilizada para Customer Relationship Management y se refiere al conjunto de prácticas, estrategias de negocio y tecnologías enfocadas en la relación con el cliente. En este proyecto utilizamos como referencia a una tienda ficticia de informática, donde desde su aplicación TechCRM puede comprobar todo tipo de cosas:
-* Clientes: 
+* Clientes:
+  * Información de contacto (foto, nombre, teléfono, correo)
+  * Última conversación con el cliente (para la fidelización con los mismos)
+  * Permite el contacto vía telefonica, WhatsApp o correo
 * Proveedores:
-* Horario:
-* Estadísticas:
+  * Información de contacto (foto, nombre, teléfono, correo)
+  * Deuda con el proveedor
+  * Permite el contacto vía telefonica, WhatsApp o correo
+* Tareas: Muestra un calendario y las tareas pendientes en formato lista.
+* Estadísticas: Muestra diferentes gráficos y un feedback y de las compras y de las ventas de tarjetas gráficas, memorias RAM, ...
 
 ## Como usar
 Contiene todo el código y los recursos multimedia para la correcta ejecución de la aplicación. Para ello:
